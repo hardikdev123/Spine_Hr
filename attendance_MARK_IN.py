@@ -3,9 +3,8 @@ import datetime
 from playwright.sync_api import sync_playwright
 from datetime import *
 from locator1 import *
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False, args=['--start-maximized'])
+with sync_playwright() as play:
+    browser = play.chromium.launch(headless=False, args=['--start-maximized'])
     page = browser.new_page()
     page.goto('https://ellicium.spinehrm.in/login.aspx?ReturnUrl=%2f')
     print('{} is opened'.format(page.title()))

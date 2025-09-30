@@ -3,13 +3,13 @@ pipeline{
     stages{
         stage('version'){
             steps{
-                sh 'python3 --version'
+                bat 'python3 --version'
             }
         }
 
         stage('attendance_MARK_IN'){
             steps{
-                sh 'attendance_MARK_IN.py'
+                bat 'attendance_MARK_IN.py'
             }
         }
     }

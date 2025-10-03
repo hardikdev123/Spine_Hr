@@ -4,6 +4,7 @@ pipeline{
         stage('version'){
             steps{
                 bat 'python --version'
+                bat 'playwright install'
             }
         }
 

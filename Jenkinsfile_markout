@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+    stages{
+        stage('version'){
+            steps{
+                bat 'python --version'
+                bat 'playwright install'
+            }
+        }
+
+        stage('attendance_MARK_OUT'){
+            steps{
+                bat 'attendance_MARK_OUT.py'
+            }
+        }
+    }
+}

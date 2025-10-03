@@ -1,19 +1,19 @@
 from datetime import datetime
 from playwright.sync_api import sync_playwright
-import jenkins
+# import jenkins
 import json
 import os
 from locator1 import *
 
 with sync_playwright() as p:
-    host = 'https://localhost:8080'
-    username = '1188464bdd0a36c568a07383c54038b983'#'hardikshettyar'
-    password = '11cfdb7d49b9dea762dc0b02ec44fc5f65'#'hardik2021'
-    server = jenkins.Jenkins(host, username=username, password=password)
+    # host = 'https://localhost:8080'
+    # username = '1188464bdd0a36c568a07383c54038b983'#'hardikshettyar'
+    # password = '11cfdb7d49b9dea762dc0b02ec44fc5f65'#'hardik2021'
+    # server = jenkins.Jenkins(host, username=username, password=password)
 
-    user = server.get_whoami()
-    version = server.get_version()
-    print(f"Hello {user} jenkins version is {version}")
+    # user = server.get_whoami()
+    # version = server.get_version()
+    # print(f"Hello {user} jenkins version is {version}")
 
     browser = p.chromium.launch(headless=False, args=['--start-maximized'])
     page = browser.new_page()
